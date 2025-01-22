@@ -9,6 +9,7 @@ import UseState from "./components/Functional components/Hooks/UseState"
 import UseEffect from "./components/Functional components/Hooks/UseEffect"
 import UseEffectAPI from "./components/Functional components/Hooks/UseEffectAPI"
 import {BrowserRouter , Routes, Route} from "react-router-dom"
+import UseReducer from "./components/Functional components/Hooks/UseReducer"
 function App(){
   return(
     <div>
@@ -24,6 +25,7 @@ function App(){
         <Route path="/usestate" element={<UseState/>}></Route>
         <Route path="/useeffect" element={<UseEffect/>}></Route>
         <Route path="/useeffectapi" element={<UseEffectAPI/>}></Route>
+        <Route path="/usereducer" element={<UseReducer/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>

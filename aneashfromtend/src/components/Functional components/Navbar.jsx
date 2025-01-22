@@ -27,6 +27,7 @@ const Navbar=()=>{
         <li><Link to="/usestate" className="link">UseState</Link></li>
         <li><Link to="/useeffect" className="link">UseEffect</Link></li>
         <li><Link to="/useeffectapi" className="link">UseEffectAPI</Link></li>
+        <li><Link to="/usereducer" className="link">UseReducer</Link></li>
 </ol>
         </nav>
         </header>
