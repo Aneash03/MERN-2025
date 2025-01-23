@@ -10,6 +10,9 @@ import UseEffect from "./components/Functional components/Hooks/UseEffect"
 import UseEffectAPI from "./components/Functional components/Hooks/UseEffectAPI"
 import {BrowserRouter , Routes, Route} from "react-router-dom"
 import UseReducer from "./components/Functional components/Hooks/UseReducer"
+import UseRef from "./components/Functional components/Hooks/UseRef"
+import UseMemo from "./components/Functional components/Hooks/useMemo"
+import UseCallBack from "./components/Functional components/Hooks/UseCallback"
 function App(){
   return(
     <div>
@@ -26,6 +29,9 @@ function App(){
         <Route path="/useeffect" element={<UseEffect/>}></Route>
         <Route path="/useeffectapi" element={<UseEffectAPI/>}></Route>
         <Route path="/usereducer" element={<UseReducer/>}></Route>
+        <Route path="/useref" element={<UseRef/>}></Route>
+        <Route path="/usememo" element={<UseMemo/>}></Route>
+        <Route path="/usecallback" element={<UseCallBack/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
