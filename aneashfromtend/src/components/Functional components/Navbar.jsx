@@ -16,7 +16,6 @@ const Navbar=()=>{
     <li><Link to="/contact" className="link">Contact</Link></li>
     <li><Link to="/signup" className="link">Signup</Link></li>
     <li><Link to="/login" className="link">Login</Link></li>
-    <li><Link to="/memo" className="link">React.memo</Link></li>
     
     <div className="dropdown">
           <li onClick={toggleDropdown} onLeave={toggleDropdown}>Hooks</li>
@@ -33,6 +32,16 @@ const Navbar=()=>{
         <li><Link to="/student"className="link">Student</Link></li>
         </ul>)}
         </div>
+        <div
+            className="dropdown">
+           <li onClick={toggleDropdown}
+            onLeave={toggleDropdown}>Memoization</li>
+            {dropdown && (
+              <ul className="dropdown-menu">
+                <li><Link to="/memo" className="link">Memo</Link></li>
+              </ul>
+            )}
+            </div>
         
 </ol>
         </nav>
