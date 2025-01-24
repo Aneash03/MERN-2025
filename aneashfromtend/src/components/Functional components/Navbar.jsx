@@ -16,10 +16,13 @@ const Navbar=()=>{
     <li><Link to="/contact" className="link">Contact</Link></li>
     <li><Link to="/signup" className="link">Signup</Link></li>
     <li><Link to="/login" className="link">Login</Link></li>
+    <li><Link to="/memo" className="link">React.memo</Link></li>
+    
     <div className="dropdown">
           <li onClick={toggleDropdown} onLeave={toggleDropdown}>Hooks</li>
           {dropdown && (
-          <ul className="dropdown-menu">  
+          <ul className="dropdown-menu"> 
+          <li><Link to="/reactlm" className="link">ReactLifecycleMethods</Link></li> 
         <li><Link to="/usestate" className="link">UseState</Link></li>
         <li><Link to="/useeffect" className="link">UseEffect</Link></li>
         <li><Link to="/useeffectapi" className="link">UseEffectAPI</Link></li>
@@ -27,6 +30,7 @@ const Navbar=()=>{
         <li><Link to="/useref" className="link">UseRef</Link></li>
         <li><Link to="/usememo" className="link">UseMemo</Link></li>
         <li><Link to="/usecallback" className="link">UseCallBack</Link></li>
+        <li><Link to="/student"className="link">Student</Link></li>
         </ul>)}
         </div>
         
