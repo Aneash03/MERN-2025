@@ -16,6 +16,9 @@ import UseCallBack from "./components/Functional components/Hooks/UseCallback"
 import ReactLifecycleMethods from "./components/Class components/ReactLifecycleMethods"
 import Student from "./components/Functional components/Hooks/UseContext"
 import Memo from "./components/Functional components/Memoization/Memo"
+import LazyloadingWithsuspense from "./components/Functional components/Memoization/LazyloadingWithsuspense"
+import UseLocalStorage from "./components/Functional components/Hooks/UseLocalStorage"
+import HoC from "./components/Functional components/HoC/HoC"
 function App(){
   return(
     <div>
@@ -38,6 +41,9 @@ function App(){
         <Route path="/reactlm" element={<ReactLifecycleMethods/>}></Route>
         <Route path="/student" element={<Student/>}></Route>
         <Route path="/memo" element={<Memo/>}></Route>
+        <Route path="/lazy" element={<LazyloadingWithsuspense/>}></Route>
+        <Route path="/usecustom" element={<UseLocalStorage/>}></Route>
+        <Route path="/hoc" element={<HoC/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
