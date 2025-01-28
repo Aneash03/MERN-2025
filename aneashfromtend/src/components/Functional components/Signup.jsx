@@ -1,52 +1,52 @@
-import React, { useState } from 'react';
+import{Link} from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+const Signup=()=>{
+    var[firstname,setFirstname]=useState("")
+    var[lastname,setLastname]=useState("")
+    var[username,setUsername]=useState("")
+    var[email,setEmail]=useState("")
+    var[password,setPassword]=useState("")
+    var navigate=useNavigate()
+    const handleSignup= async (event)=>{
+        event.preventDefault()
+console.log("Event Triggered")
+try{const req= await axios.post("http://localhost:3001/signup",{
+    firstName:firstname,
+    lastName:lastname,
+    userName:username,
+    email:email,
+    password:password
+})
+//console.log(req)
+alert(req.data)
+navigate("/login")
+}
+catch(err){console.log(err)
+    }}
+    return(
+        <div style={{ textAlign: "center" }}>
 
-const Signup = () => {
-  
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-
-  
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Name:', name);
-    console.log('Password:', password);
-    
-  };
-
-  return (
-    <div>
-      <h1>SignUp Page</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <h3>Enter the Name</h3>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
+            <h1 >Signup</h1>
+            <form className="container" method="POST" onSubmit={handleSignup}>
+                <div>
+            Firstname:
+                    <input type="text" value={firstname} onChange={(e)=>setFirstname(e.target.value)} required/><br/><br/>
+            LastName:
+                    <input type="text" value={lastname} onChange={(e)=>setLastname(e.target.value)} required/><br/><br/>
+            Username: 
+                    <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)} required/><br /><br />
+            Email: 
+                    <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} required/><br /><br />
+            Password:
+                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
+            <br /><br />
+            <button className="button" type="submit" onClick={handleSignup}>SIGNUP</button>
+            </div>
+            </form>
+            Already have an account?<a href="/login">Login</a>
         </div>
-        
-        <div>
-          <h3>Enter the Password</h3>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  );
-};
-
+    )
+}
 export default Signup;
